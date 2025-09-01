@@ -79,8 +79,6 @@ pnpm dev
 bun dev
 ```
 
-### Open http://localhost:3000 with your browser to see the result.
-
 ### 5. Run Convex local development
 ``` bash
 If you want to run Convex locally for development:
@@ -89,3 +87,30 @@ npx convex dev
 ```
 
 - This will start a local Convex instance connected to your Next.js app.
+
+---
+## Tech Stack
+
+- Frontend: Next.js, React, Tailwind CSS
+
+- Authentication: Clerk
+
+- Database: Convex
+
+---
+
+## Contributing
+
+- Fork the repository
+
+- Create a new branch (git checkout -b feature/YourFeature)
+
+- Commit your changes (git commit -m "Add some feature")
+
+- Push to the branch (git push origin feature/YourFeature)
+
+- Open a Pull Request
+
+- Deployment: Vercel
+
+---
