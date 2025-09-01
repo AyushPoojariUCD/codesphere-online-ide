@@ -7,6 +7,16 @@ This project uses **Next.js** for the frontend, **Clerk** for authentication, **
 
 ---
 
+## 🎬 Demo
+
+Experience CodeSphere in action:
+
+![CodeSphere Demo](https://github.com/AyushPoojariUCD/codesphere-online-ide/blob/main/demo/demo-video.gif)
+
+This GIF shows real-time collaborative editing, running code, and managing snippets.
+
+---
+
 ## Features
 
 - Real-time collaborative code editing
