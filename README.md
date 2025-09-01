@@ -34,3 +34,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+# Set Enviroment (.env)
+
+``` bash
+# Convex cloud deployment
+NEXT_PUBLIC_CONVEX_URL=
+
+# Clerk (test or prod keys)
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+# Clerk JWT Secret set in convex dashboard
+CLERK_JWT_ISSUER_DOMAIN=
+
+# Deployment used by `npx convex dev`
+CONVEX_DEPLOYMENT=
+
+# Webhook Secret set in convex dashboard
+CLERK_WEBHOOK_SECRET=
+```
