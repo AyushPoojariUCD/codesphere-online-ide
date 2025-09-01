@@ -1,10 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CodeSphere - Cloud-Based Collaborative Code Editor
+
+CodeSphere is a cloud-based collaborative code editor inspired by VS Code & Replit.  
+Write, run, and share code in multiple languages directly from your browser with real-time collaboration, syntax highlighting, and an integrated terminal.  
+
+This project uses **Next.js** for the frontend, **Clerk** for authentication, **Convex** for the database, and is deployable on **Vercel**.
+
+---
+
+## Features
+
+- Real-time collaborative code editing
+- Run code in multiple languages
+- Syntax highlighting
+- Integrated terminal/output
+- Code snippet saving, starring, and commenting
+- User authentication via Clerk
+- Cloud database via Convex
+- Responsive and modern UI
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
 
 ```bash
+git clone <your-repo-url>
+cd <your-repo-folder>
+```
+
+### 2. Install dependencies
+```
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+### 3. Set environment variables
+
+#### Create a .env file in the root of your project and add the following:
+``` bash
+# Convex cloud deployment
+NEXT_PUBLIC_CONVEX_URL=
+
+# Clerk authentication keys
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+CLERK_JWT_ISSUER_DOMAIN=
+
+# Convex deployment used by `npx convex dev`
+CONVEX_DEPLOYMENT=
+
+# Clerk webhook secret for Convex dashboard
+CLERK_WEBHOOK_SECRET=
+```
+
+- Make sure to fill in the values with your Clerk and Convex credentials.
+
+### 4. Run the development server
+``` bash
 npm run dev
 # or
 yarn dev
@@ -14,42 +69,13 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-# Set Enviroment (.env)
-
+### 5. Run Convex local development
 ``` bash
-# Convex cloud deployment
-NEXT_PUBLIC_CONVEX_URL=
+If you want to run Convex locally for development:
 
-# Clerk (test or prod keys)
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-# Clerk JWT Secret set in convex dashboard
-CLERK_JWT_ISSUER_DOMAIN=
-
-# Deployment used by `npx convex dev`
-CONVEX_DEPLOYMENT=
-
-# Webhook Secret set in convex dashboard
-CLERK_WEBHOOK_SECRET=
+npx convex dev
 ```
+
+- This will start a local Convex instance connected to your Next.js app.
